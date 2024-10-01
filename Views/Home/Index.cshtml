@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h2>Test Exception Handling</h2>
+<button id="testExceptionBtn">Throw Exception</button>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#testExceptionBtn').click(function() {
+            $.ajax({
+                url: '/Home/Test',
+                type: 'GET',
+                success: function(data) {
+                    console.log("Success", data);
+                }
+            });
+        });
+    });
+</script>
